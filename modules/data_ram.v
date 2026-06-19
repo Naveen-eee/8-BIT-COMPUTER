@@ -55,7 +55,7 @@ module data_ram(
 
         else
         begin
-            data_ram_out = 8'b00000000;
+            data_ram_out = 8'bzzzzzzzz;
         end
 
     end
