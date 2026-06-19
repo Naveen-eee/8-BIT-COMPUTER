@@ -30,7 +30,7 @@ module instruction_ram(
         if(iro)
             instruction_out = memory[pc_out];
         else
-            instruction_out = 8'b00000000;
+             instruction_out = 8'bzzzzzzzz;
     end
 
 endmodule
