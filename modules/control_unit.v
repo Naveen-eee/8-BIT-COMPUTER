@@ -23,7 +23,7 @@ module control_unit(
     output reg load_out,
 
     output reg load_input,
-
+    output reg input_out_en,
     output reg ri,
     output reg ro,
 
@@ -101,7 +101,7 @@ begin
     load_out    = 1'b0;
 
     load_input  = 1'b0;
-
+    input_out_en = 1'b0;
     ri          = 1'b0;
     ro          = 1'b0;
 
@@ -234,8 +234,9 @@ begin
         end
 
         4'b0011:
-        begin                             // INP
-            load_a = 1'b1;
+        begin
+            input_out_en = 1'b1;
+            load_a       = 1'b1;
         end
 
         4'b0101:
