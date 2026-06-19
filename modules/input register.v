@@ -3,20 +3,23 @@ module input_register(
     input clk,
     input load_input,
 
+    input input_out_en,
+
     input [7:0] sensor_data,
 
-    output reg [7:0] input_reg_out
+    output [7:0] input_reg_out
 
 );
 
+reg [7:0] input_reg;
+
 always @(posedge clk)
 begin
-
     if(load_input)
-    begin
-        input_reg_out <= sensor_data;
-    end
-
+        input_reg <= sensor_data;
 end
+
+assign input_reg_out =
+       (input_out_en) ? input_reg : 8'bzzzzzzzz;
 
 endmodule
