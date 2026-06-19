@@ -1,0 +1,19 @@
+| Opcode | Mnemonic | Description                        |
+| ------ | -------- | ---------------------------------- |
+| `0000` | NOP      | No Operation                       |
+| `0001` | LDA addr | Load Data RAM[addr] → A Register   |
+| `0010` | STA addr | Store A Register → Data RAM[addr]  |
+| `0011` | ADD addr | A ← A + Data RAM[addr]             |
+| `0100` | SUB addr | A ← A - Data RAM[addr]             |
+| `0101` | IN       | Sensor/Input Register → A Register |
+| `0110` | OUT      | A Register → Output Register       |
+| `0111` | JMP addr | PC ← addr                          |
+| `1000` | JZ addr  | Jump if Zero Flag = 1              |
+| `1001` | JC addr  | Jump if Carry Flag = 1             |
+| `1010` | INC      | A ← A + 1                          |
+| `1011` | DEC      | A ← A - 1                          |
+| `1100` | AND addr | A ← A AND Data RAM[addr]           |
+| `1101` | OR addr  | A ← A OR Data RAM[addr]            |
+| `1110` | XOR addr | A ← A XOR Data RAM[addr]           |
+| `1111` | HLT      | Halt Processor                     |
+
