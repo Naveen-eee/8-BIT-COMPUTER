@@ -10,26 +10,26 @@ The proposed 8-bit computer architecture follows a Harvard-inspired memory organ
 The architecture consists of A Register and B Register for operand storage, an Arithmetic Logic Unit (ALU) for arithmetic and logical operations, and a Flag Register for status monitoring. An Input Register is used to receive external data, while a DMA Controller enables direct data transfer between peripherals and memory when required. All modules communicate through a shared 8-bit internal bus. The final result is stored in the Output Register and displayed on the FPGA board through a Binary-to-BCD Converter and Seven-Segment Display interface.
 
 
+## Module List
 
-                                                               ## Module List
-
-- **Program Counter (PC)** – Holds the address of the next instruction to be fetched.
-- **Instruction RAM** – Stores the program instructions.
-- **Memory Address Register (MAR)** – Holds the memory address for instruction or data access.
-- **Instruction Register (IR)** – Stores the currently fetched instruction.
-- **Control Unit (FSM)** – Decodes the instruction and generates control signals.
-- **A Register (Accumulator)** – Primary register used for arithmetic and logic operations.
-- **B Register** – Temporary register used as the second operand for ALU operations.
-- **Arithmetic Logic Unit (ALU)** – Performs arithmetic and logical operations.
-- **Flag Register** – Stores status flags such as Zero (Z) and Carry (C).
-- **Data RAM** – Stores operands and program data.
-- **Input Register** – Receives external input data.
-- **Output Register** – Holds data to be sent to external devices.
-- **DMA Controller** – Handles direct data transfer between peripherals and memory.
-- **Binary-to-BCD Converter** – Converts binary output data into BCD format.
-- **Seven-Segment Decoder** – Converts BCD data into signals for a seven-segment display.
-- 
-                                                            **Instruction Set Architecture (ISA)**
+```text
+Program Counter (PC)      - Holds the address of the next instruction to be fetched.
+Instruction RAM          - Stores the program instructions.
+Memory Address Register  - Holds the memory address for instruction or data access.
+Instruction Register     - Stores the currently fetched instruction.
+Control Unit (FSM)       - Decodes the instruction and generates control signals.
+A Register               - Primary register used for arithmetic and logic operations.
+B Register               - Temporary register used as the second operand for ALU operations.
+Arithmetic Logic Unit    - Performs arithmetic and logical operations.
+Flag Register            - Stores Zero and Carry flags.
+Data RAM                 - Stores operands and program data.
+Input Register           - Receives external input data.
+Output Register          - Holds data to be sent to external devices.
+DMA Controller           - Handles direct data transfer between peripherals and memory.
+Binary-to-BCD Converter  - Converts binary data into BCD format.
+Seven-Segment Decoder    - Converts BCD data into seven-segment display signals.
+```
+							**	 (ISA)**
 | Opcode | Instruction | Description                                                        |
 | ------ | ----------- | ------------------------------------------------------------------ |
 | `0000` | NOP         | No operation. Processor proceeds to the next instruction.          |
