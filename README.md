@@ -50,7 +50,7 @@ Seven-Segment Decoder    - Converts BCD data into seven-segment display signals.
 | `1111` | HLT         | Halt processor execution.                                          |
 
 
-     ## Working Principle
+     																	** Working Principle**
 
 The proposed processor operates using the Fetch–Decode–Execute cycle.
 
