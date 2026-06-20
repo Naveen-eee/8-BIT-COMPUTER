@@ -4,3 +4,4 @@ OBJECTIVE
 
   SYSTEM ARCHITECTURE
   
+<img width="894" height="1266" alt="image" src="https://github.com/user-attachments/assets/9f82e041-3862-492a-a422-a1d37d517a98" />
