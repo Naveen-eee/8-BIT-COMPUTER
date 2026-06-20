@@ -12,21 +12,21 @@ The architecture consists of A Register and B Register for operand storage, an A
 
 
                                                                      **   Module List **
-•	Program Counter (PC)
-•	Instruction Register (IR)
-•	Memory Address Register (MAR)
-•	Instruction RAM
-•	Data RAM
-•	A Register
-•	B Register
-•	Arithmetic Logic Unit (ALU)
-•	Flag Register
-•	Input Register
-•	Output Register
-•	DMA Controller
-•	Control Unit (FSM)
-•	Binary-to-BCD Converter
-•	Seven-Segment Decoder
+Program Counter (PC) – Holds the address of the next instruction to be fetched.
+Instruction RAM – Stores the program instructions.
+Memory Address Register (MAR) – Holds the memory address for instruction or data access.
+Instruction Register (IR) – Stores the currently fetched instruction.
+Control Unit (FSM) – Decodes the instruction and generates control signals.
+A Register (Accumulator) – Primary register used for arithmetic and logic operations.
+B Register – Temporary register used as the second operand for ALU operations.
+Arithmetic Logic Unit (ALU) – Performs arithmetic and logical operations.
+Flag Register – Stores status flags such as Zero (Z) and Carry (C).
+Data RAM – Stores operands and program data.
+Input Register – Receives external input data.
+Output Register – Holds data to be sent to external devices.
+DMA Controller – Handles direct data transfer between peripherals and memory.
+Binary-to-BCD Converter – Converts binary output data into BCD format.
+Seven-Segment Decoder – Converts BCD data into signals for seven-segment display.
 
                                                             **Instruction Set Architecture (ISA)**
 | Opcode | Instruction | Description                                                        |
@@ -49,7 +49,9 @@ The architecture consists of A Register and B Register for operand storage, an A
 | `1111` | HLT         | Halt processor execution.                                          |
 
 
-                                                                        **Working Principle**
+     
+																	**	Working Principle**
+	
 	The proposed processor operates using the Fetch–Decode–Execute cycle. During the fetch stage, the Program Counter (PC) generates the address of the next instruction, which is retrieved from Instruction RAM and loaded into the Instruction Register (IR). The IR separates the instruction into opcode and operand fields. The opcode is sent to the Control Unit for decoding, while the operand is used as a memory address when required.
 During the execute stage, the Control Unit generates the necessary control signals to enable data transfer between registers, memory, and the ALU through the shared bus. Arithmetic and logical instructions are executed by the ALU, while memory instructions access Data RAM through the Memory Address Register (MAR). The resulting data is stored in registers or memory as required. For output operations, data is transferred to the Output Register and displayed on the seven-segment display. The processor continues executing instructions sequentially until a Halt (HLT) instruction is encountered.
 
