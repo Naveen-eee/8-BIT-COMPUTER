@@ -29,26 +29,27 @@ DMA Controller           - Handles direct data transfer between peripherals and 
 Binary-to-BCD Converter  - Converts binary data into BCD format.
 Seven-Segment Decoder    - Converts BCD data into seven-segment display signals.
 ```
-## ISA  
-</div>| Opcode | Instruction | Description                                                        |
-| ------ | ----------- | ------------------------------------------------------------------ |
-| `0000` | NOP         | No operation. Processor proceeds to the next instruction.          |
-| `0001` | LDA addr    | Load data from memory address `addr` into the Accumulator (AC).    |
-| `0010` | STA addr    | Store the contents of the Accumulator into memory address `addr`.  |
-| `0011` | INP         | Read data from the input register into the Accumulator.            |
-| `0100` | OUT         | Transfer the contents of the Accumulator to the output register.   |
-| `0101` | ADD addr    | Add data from memory address `addr` to the Accumulator.            |
-| `0110` | SUB addr    | Subtract data at memory address `addr` from the Accumulator.       |
-| `0111` | INC         | Increment the Accumulator by 1.                                    |
-| `1000` | DEC         | Decrement the Accumulator by 1.                                    |
-| `1001` | AND addr    | Perform bitwise AND between Accumulator and memory data at `addr`. |
-| `1010` | OR addr     | Perform bitwise OR between Accumulator and memory data at `addr`.  |
-| `1011` | XOR addr    | Perform bitwise XOR between Accumulator and memory data at `addr`. |
-| `1100` | JMP addr    | Unconditionally jump to memory address `addr`.                     |
-| `1101` | JZ addr     | Jump to address `addr` if the Zero Flag (Z) is set.                |
-| `1110` | JC addr     | Jump to address `addr` if the Carry Flag (C) is set.               |
-| `1111` | HLT         | Halt processor execution.                                          |
+# Instruction Set Architecture (ISA)
 
+</div>
+| Opcode | Instruction | Description |
+|---------|------------|-------------|
+| 0000 | NOP | No operation |
+| 0001 | LDA addr | Load data from memory into Accumulator |
+| 0010 | STA addr | Store Accumulator data into memory |
+| 0011 | INP | Read input data into Accumulator |
+| 0100 | OUT | Send Accumulator data to output register |
+| 0101 | ADD addr | Add memory data to Accumulator |
+| 0110 | SUB addr | Subtract memory data from Accumulator |
+| 0111 | INC | Increment Accumulator |
+| 1000 | DEC | Decrement Accumulator |
+| 1001 | AND addr | Bitwise AND operation |
+| 1010 | OR addr | Bitwise OR operation |
+| 1011 | XOR addr | Bitwise XOR operation |
+| 1100 | JMP addr | Unconditional jump |
+| 1101 | JZ addr | Jump if Zero flag is set |
+| 1110 | JC addr | Jump if Carry flag is set |
+| 1111 | HLT | Halt processor execution |
      																
 															
 
