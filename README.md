@@ -51,21 +51,24 @@ Seven-Segment Decoder    - Converts BCD data into seven-segment display signals.
 
 
      																
-																<b> Working Principle</b>
+															<div align="center">
+
+# Working Principle
+
+</div>
 
 The proposed processor operates using the Fetch–Decode–Execute cycle.
 
-During the fetch stage, the Program Counter (PC) generates the address of the next instruction, which is retrieved from Instruction RAM and loaded into the Instruction Register (IR).
-
-The IR separates the instruction into opcode and operand fields. The opcode is sent to the Control Unit for decoding, while the operand is used as a memory address when required.
+During the fetch stage, the Program Counter (PC) generates the address of the next instruction, which is retrieved from Instruction RAM and loaded into the Instruction Register (IR). The IR separates the instruction into opcode and operand fields. The opcode is sent to the Control Unit for decoding, while the operand is used as a memory address when required.
 
 The Control Unit generates the necessary control signals to coordinate data movement and execution. Depending on the instruction, operands are fetched from Data RAM, the Input Register, or internal registers.
 
-The Arithmetic Logic Unit (ALU) performs arithmetic or logical operations using data from the A Register and B Register. The resulting output is stored back in the Accumulator, and the Flag Register updates the Zero (Z) and Carry (C) status flags.
+The Arithmetic Logic Unit (ALU) performs arithmetic and logical operations using data from the A Register and B Register. The resulting output is stored back in the Accumulator, and the Flag Register updates the Zero (Z) and Carry (C) status flags.
 
 For output operations, data is transferred to the Output Register. The Binary-to-BCD Converter and Seven-Segment Decoder convert the binary result into a displayable format for the seven-segment display.
 
 The processor continues executing instructions sequentially until a HLT (Halt) instruction is encountered.
+
 
 
 
