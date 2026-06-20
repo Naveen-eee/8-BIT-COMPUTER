@@ -76,10 +76,20 @@ The processor continues executing instructions sequentially until a HLT (Halt) i
 # Tools Used
 
 </div>
-| Tool                             | Purpose                                                                                       |
-| -------------------------------- | --------------------------------------------------------------------------------------------- |
-| **Verilog HDL**                  | Hardware Description Language used for designing and implementing the processor architecture. |
-| **Xilinx Vivado Design Suite**   | Used for RTL design, simulation, synthesis, implementation, and bitstream generation.         |
-| **Boolean Spartan-7 FPGA Board** | Hardware platform used for implementing and validating the processor design.                  |
+```text
+TOOLS USED
+
+• Verilog HDL
+  - Hardware Description Language used for processor design.
+
+• Xilinx Vivado Design Suite
+  - Used for RTL design, simulation, synthesis,
+    implementation, and bitstream generation.
+
+• Boolean Spartan-7 FPGA Board
+  - Target FPGA platform used for hardware
+    implementation and validation.
+```
+
 
 
