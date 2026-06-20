@@ -51,7 +51,7 @@ Seven-Segment Decoder    - Converts BCD data into seven-segment display signals.
 
 
      																
-															<div align="center">
+															
 
 # Working Principle
 
