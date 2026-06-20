@@ -29,10 +29,8 @@ DMA Controller           - Handles direct data transfer between peripherals and 
 Binary-to-BCD Converter  - Converts binary data into BCD format.
 Seven-Segment Decoder    - Converts BCD data into seven-segment display signals.
 ```
-#ISA  
-</div>
-						 
-						 | Opcode | Instruction | Description                                                        |
+## ISA  
+</div>| Opcode | Instruction | Description                                                        |
 | ------ | ----------- | ------------------------------------------------------------------ |
 | `0000` | NOP         | No operation. Processor proceeds to the next instruction.          |
 | `0001` | LDA addr    | Load data from memory address `addr` into the Accumulator (AC).    |
@@ -50,7 +48,6 @@ Seven-Segment Decoder    - Converts BCD data into seven-segment display signals.
 | `1101` | JZ addr     | Jump to address `addr` if the Zero Flag (Z) is set.                |
 | `1110` | JC addr     | Jump to address `addr` if the Carry Flag (C) is set.               |
 | `1111` | HLT         | Halt processor execution.                                          |
-
 
      																
 															
