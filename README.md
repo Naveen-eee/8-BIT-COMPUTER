@@ -11,23 +11,24 @@ The architecture consists of A Register and B Register for operand storage, an A
 
 
 
-                                                                     **   Module List **
-Program Counter (PC) – Holds the address of the next instruction to be fetched.
-Instruction RAM – Stores the program instructions.
-Memory Address Register (MAR) – Holds the memory address for instruction or data access.
-Instruction Register (IR) – Stores the currently fetched instruction.
-Control Unit (FSM) – Decodes the instruction and generates control signals.
-A Register (Accumulator) – Primary register used for arithmetic and logic operations.
-B Register – Temporary register used as the second operand for ALU operations.
-Arithmetic Logic Unit (ALU) – Performs arithmetic and logical operations.
-Flag Register – Stores status flags such as Zero (Z) and Carry (C).
-Data RAM – Stores operands and program data.
-Input Register – Receives external input data.
-Output Register – Holds data to be sent to external devices.
-DMA Controller – Handles direct data transfer between peripherals and memory.
-Binary-to-BCD Converter – Converts binary output data into BCD format.
-Seven-Segment Decoder – Converts BCD data into signals for seven-segment display.
+                                                               ## Module List
 
+- **Program Counter (PC)** – Holds the address of the next instruction to be fetched.
+- **Instruction RAM** – Stores the program instructions.
+- **Memory Address Register (MAR)** – Holds the memory address for instruction or data access.
+- **Instruction Register (IR)** – Stores the currently fetched instruction.
+- **Control Unit (FSM)** – Decodes the instruction and generates control signals.
+- **A Register (Accumulator)** – Primary register used for arithmetic and logic operations.
+- **B Register** – Temporary register used as the second operand for ALU operations.
+- **Arithmetic Logic Unit (ALU)** – Performs arithmetic and logical operations.
+- **Flag Register** – Stores status flags such as Zero (Z) and Carry (C).
+- **Data RAM** – Stores operands and program data.
+- **Input Register** – Receives external input data.
+- **Output Register** – Holds data to be sent to external devices.
+- **DMA Controller** – Handles direct data transfer between peripherals and memory.
+- **Binary-to-BCD Converter** – Converts binary output data into BCD format.
+- **Seven-Segment Decoder** – Converts BCD data into signals for a seven-segment display.
+- 
                                                             **Instruction Set Architecture (ISA)**
 | Opcode | Instruction | Description                                                        |
 | ------ | ----------- | ------------------------------------------------------------------ |
