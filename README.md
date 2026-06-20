@@ -83,5 +83,13 @@ The processor continues executing instructions sequentially until a HLT (Halt) i
 | Xilinx Vivado Design Suite   | Used for simulation, synthesis, implementation, and bitstream generation.         |
 | Boolean Spartan-7 FPGA Board | FPGA hardware platform used for implementing and validating the processor design. |
 
-
+## Six T-Cycle Operation
+| Cycle  | Operation                                                                                                |
+| ------ | -------------------------------------------------------------------------------------------------------- |
+| **T0** | Program Counter (PC) sends the instruction address to Instruction RAM.                                   |
+| **T1** | Instruction RAM outputs the instruction and it is loaded into the Instruction Register (IR).             |
+| **T2** | IR separates the instruction into Opcode and Operand. The PC increments to the next instruction address. |
+| **T3** | Control Unit decodes the Opcode and generates the required control signals.                              |
+| **T4** | Operand is transferred to MAR and Data RAM is accessed if required. Data is loaded into registers.       |
+| **T5** | ALU executes the operation or data is transferred to the Output Register. Results and flags are updated. |
 
