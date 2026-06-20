@@ -50,12 +50,21 @@ Seven-Segment Decoder    - Converts BCD data into seven-segment display signals.
 | `1111` | HLT         | Halt processor execution.                                          |
 
 
-     
-																	**	Working Principle**
-	
-	The proposed processor operates using the Fetch–Decode–Execute cycle. During the fetch stage, the Program Counter (PC) generates the address of the next instruction, which is retrieved from Instruction RAM and loaded into the Instruction Register (IR). The IR separates the instruction into opcode and operand fields. The opcode is sent to the Control Unit for decoding, while the operand is used as a memory address when required.
-During the execute stage, the Control Unit generates the necessary control signals to enable data transfer between registers, memory, and the ALU through the shared bus. Arithmetic and logical instructions are executed by the ALU, while memory instructions access Data RAM through the Memory Address Register (MAR). The resulting data is stored in registers or memory as required. For output operations, data is transferred to the Output Register and displayed on the seven-segment display. The processor continues executing instructions sequentially until a Halt (HLT) instruction is encountered.
+     ## Working Principle
 
+The proposed processor operates using the Fetch–Decode–Execute cycle.
+
+During the fetch stage, the Program Counter (PC) generates the address of the next instruction, which is retrieved from Instruction RAM and loaded into the Instruction Register (IR).
+
+The IR separates the instruction into opcode and operand fields. The opcode is sent to the Control Unit for decoding, while the operand is used as a memory address when required.
+
+The Control Unit generates the necessary control signals to coordinate data movement and execution. Depending on the instruction, operands are fetched from Data RAM, the Input Register, or internal registers.
+
+The Arithmetic Logic Unit (ALU) performs arithmetic or logical operations using data from the A Register and B Register. The resulting output is stored back in the Accumulator, and the Flag Register updates the Zero (Z) and Carry (C) status flags.
+
+For output operations, data is transferred to the Output Register. The Binary-to-BCD Converter and Seven-Segment Decoder convert the binary result into a displayable format for the seven-segment display.
+
+The processor continues executing instructions sequentially until a HLT (Halt) instruction is encountered.
 
 
 
